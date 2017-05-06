@@ -12,7 +12,7 @@ public class SmokeSensor implements BatterySensor, Sensor {
 
     batteryPercentage = batteryPercentage * 0.8;
     double random = Math.random();
-    return (random < 0.1);
+    return (random < 1); // < 0.1
   }
 
   @Override

@@ -1,6 +1,6 @@
 package Controls;
 
-import Announcement.AnnouncementContext;
+import Alert.AnnouncementFactory;
 import Sensors.Sensor;
 
 import java.util.List;
@@ -15,14 +15,14 @@ public class ControlUnit {
   public ControlUnit(List<Sensor> sensors) {
     this.sensors = sensors;
   }
-  private AnnouncementContext announcementContext = null;
+  //private AnnouncementContext announcementContext = null;
 
 
   public void pollSensors() throws Exception {
 
     for (Sensor sensor : sensors) {
       if (sensor.isTriggered()) {
-        AnnouncementContext.doAnnouncement(sensor);
+        AnnouncementFactory.getInstance().getAnnouncement(sensor).trigger();
         System.out.println("A " + sensor.getSensorType() + " sensor was triggered at " + sensor.getLocation());
       } else {
         System.out.println("Polled " + sensor.getSensorType() + " at " + sensor.getLocation() + " successfully");
