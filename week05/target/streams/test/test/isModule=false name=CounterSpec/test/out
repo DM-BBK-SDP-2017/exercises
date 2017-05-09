@@ -1,8 +1,0 @@
-[0m[[0minfo[0m] [0m[32mCounterSpec:[0m[0m
-[0m[[0minfo[0m] [0m[32mA Counter[0m[0m
-[0m[[0minfo[0m] [0m[32m- Should inc by 1[0m[0m
-[0m[[0minfo[0m] [0m[32m- Should dec by 1[0m[0m
-[0m[[0minfo[0m] [0m[32m- Should let user increment by any number[0m[0m
-[0m[[0minfo[0m] [0m[32m- Should let user decrement by any number[0m[0m
-[0m[[0minfo[0m] [0m[31m- Should work with adder *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  15 did not equal 14 (CounterTests.scala:38)[0m[0m
