@@ -12,7 +12,7 @@
 
   def testMatch(stringg: String) = stringg match {
     case "testString" => print(stringg)
-    case "" => print("fuckalol")
+    case "" => print("teststring")
     case other
 
 
