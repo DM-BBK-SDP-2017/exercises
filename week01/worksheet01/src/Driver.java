@@ -3,7 +3,7 @@ public class Driver {
     Storage<BankAccount> aStorage = new Storage<>();
     Storage<String> sStorage = new Storage<>();
     Class<BankAccount> baCls = BankAccount.class;
-    //Class baCls = BankAccount.class;
+
     try {
       BankAccount myAccount = (BankAccount) baCls.newInstance();
       aStorage.setValue(myAccount);

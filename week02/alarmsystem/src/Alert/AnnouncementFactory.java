@@ -26,14 +26,15 @@ public class AnnouncementFactory {
 
 
     public AnnouncementFactory() {
+       // System.out.println("HERE");
         properties = new Properties();
-        propsFile = new File("/Users/dannymadell/Documents/code/SDP-2017/exercises/week02/alarmsystem/src/bindings.properties");
+        propsFile = new File("alarmsystem/src/bindings.properties");
         try {
             properties.load(new FileInputStream(propsFile));
         } catch (Exception ex) {ex.printStackTrace();}
         map = new HashMap<>();
         properties.forEach((x, y) -> map.put(x, y));
-        System.out.println(map.size());
+        //map.forEach((x,y) -> System.out.println(x + " " + y));
     }
 
     public static AnnouncementFactory getInstance() {
@@ -45,10 +46,13 @@ public class AnnouncementFactory {
     }
 
     public Announcement getAnnouncement(Sensor sensor) throws Exception {
-        //announcement = (Announcement) Class.forName(properties.getProperty(sensor.getClass().toString())).newInstance();
 
-        Class a = (Class) map.get(sensor);
-        return (Announcement) a.newInstance();
+
+        return (Announcement) Class.forName(properties.getProperty(sensor.getClass().getCanonicalName())).newInstance();
+
+
+
+
 
 
     }

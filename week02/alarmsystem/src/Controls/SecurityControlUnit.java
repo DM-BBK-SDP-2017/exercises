@@ -10,7 +10,6 @@ import java.util.List;
  */
 public class SecurityControlUnit extends ControlUnit {
 
-    //private List<Sensors.Sensor> sensors = null;
 
    public SecurityControlUnit(List<Sensor> list) {
         super(list);

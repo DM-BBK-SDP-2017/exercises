@@ -1,9 +1,9 @@
 package Sensors;
 
-public class FireSensor implements BatterySensor, Sensor {
+public class FireSensor implements BatterySensor {
 
   private Double batteryPercentage = 100.0;
-  private String location;
+  private String location = "Location Not Set Yet";
   private final String sensorType = "Fire";
   private final String sensorCategory = "Battery";
 
@@ -25,7 +25,6 @@ public class FireSensor implements BatterySensor, Sensor {
     return sensorType;
   }
 
-  @Override
   public double getBatteryPercentage() {
     return batteryPercentage;
   }

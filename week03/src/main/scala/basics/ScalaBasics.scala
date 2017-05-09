@@ -79,7 +79,7 @@ object ScalaBasics {
     for (i <- r) {
       lowest = lowest.min(i)
     }
-    return lowest
+    lowest
   }
 
   /**
@@ -169,7 +169,7 @@ object ScalaBasics {
     val newString = (for (i <- s;
          if (!":.?,;!-' ".contains(i)))
       yield i).toLowerCase()
-    return newString.equals(newString.reverse)
+     newString.equals(newString.reverse)
 
 
     /*
@@ -219,6 +219,12 @@ object ScalaBasics {
    * @param lines the lines of a text file
    * @return a map from words to the number of times that word was seen
    */
-  def wordCounter(lines: Array[String]): Map[String, Int] = ???
+  def wordCounter(lines: Array[String]): Map[String, Int] = {
+    var map: Map[String, Int] = Map()
+    for (l: String <- lines.toSet) {
+      map = map + (l -> lines.count(l => true))
+    }
+      map
+  }
 
 }

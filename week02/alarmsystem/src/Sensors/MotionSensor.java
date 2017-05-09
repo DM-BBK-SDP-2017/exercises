@@ -3,9 +3,9 @@ package Sensors;
 /**
  * Created by dannymadell on 21/01/2017.
  */
-public class MotionSensor implements Sensor, MainsSensor {
+public class MotionSensor implements Sensor {
 
-    private String location;
+    private String location = "Location Not Set Yet";
     private final String sensorType = "Motion";
     private final String sensorCategory = "Mains";
 

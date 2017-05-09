@@ -13,7 +13,7 @@ object Strip {
   case class ICons(head: Int, tail: IList) extends IList
   //The following function would add n to every number in a list:
 
-  def add(n: Int, lst: IList): IList = alist match {
+  def add(n: Int, lst: IList): IList = lst match {
     case INil() => INil()
     case ICons(head, tail) => ICons(head + n, add(n, tail))
   }
